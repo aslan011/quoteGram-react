@@ -10,6 +10,8 @@ You can see this in action at https://aslan011.github.io/quoteGram-react/.
 * Follow some and your feed will be updated.
 * Further functionality is in progress! 
 
+It is still only basic functionality right now, will be added more shortly. Due to be added; ability to upload new quotes. 
+
 # Technologies used
 * React
 * React router
