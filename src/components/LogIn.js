@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import FilledInput from '@material-ui/core/FilledInput';
-import Button from '@material-ui/core/Button';
-import { Box } from '@material-ui/core';
+import { Box, Button, FilledInput, Typography, Container } from '@material-ui/core';
 
 class LogIn extends Component {
     constructor(props) {
@@ -29,7 +25,7 @@ class LogIn extends Component {
     return (
       <Container component="main" maxWidth="sm">
           <Box pb={15}></Box>
-          <img margin="0 auto"  src="./logo.png" alt="logo" />
+          <img margin="0 auto" src={require("./logo.png")} alt="logo" />
           <Typography align="center" component="h6" variant="h6">
           Sign up to see photos and videos from your friends.
           </Typography>

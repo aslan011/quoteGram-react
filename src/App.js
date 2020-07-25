@@ -22,7 +22,7 @@ function LogInControl(props) {
         <Route path='/explore' render={() => <Explore users = {props.users} currentUser = {props.currentUser} followUser = {props.followUser} />} />
         <Route path='/messages' component={Messages} />
         <Route path='/notifications' component={Notifications} />
-        <Route path='/profile' render={() => <Profile currentUser = {props.currentUser} />} />
+        <Route path='/profile' render={() => <Profile currentUser = {props.currentUser} uploadQuote = {props.uploadQuote} />} />
       </Router>
     );
   } else if (props.isloggingIn) {
@@ -69,6 +69,14 @@ class App extends Component {
     .then(() => this.accountValidation(user))
   }
 
+  uploadQuote = (key, quoteObj) => {
+    const user = db.collection('users').doc(key);
+    user.update({
+      quotes: firebase.firestore.FieldValue.arrayUnion(quoteObj.text)
+    });
+    this.listener().then(() => {this.accountValidation(this.state.currentUser)});
+  }
+
   followUser = (key, newFollow) => {
     const user = db.collection('users').doc(key);
     user.update({
@@ -108,7 +116,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <LogInControl users={this.state.users} currentUser = {this.state.currentUser} followUser = {this.followUser} accountValidation = {this.accountValidation} loggingIn = {this.loggingIn} addUser = {this.addUser} isLoggedIn = {this.state.isLoggedIn} isloggingIn = {this.state.isloggingIn}/>
+        <LogInControl users={this.state.users} currentUser = {this.state.currentUser} followUser = {this.followUser} uploadQuote = {this.uploadQuote} accountValidation = {this.accountValidation} loggingIn = {this.loggingIn} addUser = {this.addUser} isLoggedIn = {this.state.isLoggedIn} isloggingIn = {this.state.isloggingIn}/>
       </div>
     );
   }

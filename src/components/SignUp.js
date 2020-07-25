@@ -33,7 +33,8 @@ class SignUp extends Component {
     return (
       <Container component="main" maxWidth="sm">
           <Box pb={15}></Box>
-          <img margin="0 auto"  src="./logo.png" alt="logo" />
+          <Typography variant="h5" color="error">This is for learning purposes only, please do not use a real email or password.</Typography>
+          <img margin="0 auto"  src={require("./logo.png")} alt="logo" />
           <Typography align="center" component="h6" variant="h6">
           Sign up to see photos and videos from your friends.
           </Typography>

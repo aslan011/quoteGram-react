@@ -8,7 +8,7 @@ function Explore(props)  {
         }
 
         const filterList = props.users.filter(user => {
-            return !props.currentUser.following.includes(user.username);
+            return (!props.currentUser.following.includes(user.username) && props.currentUser.username !== user.username);
         })
 
         const Display = () => {

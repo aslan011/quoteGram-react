@@ -1,7 +1,19 @@
 import React from 'react';
-import { Container, Box, Typography } from '@material-ui/core';
+import { Container, Box, Button, Typography, FormControl, Input, InputLabel } from '@material-ui/core';
 
 function Profile(props)  {
+        const [userInfo, setUserInfo] = React.useState({ 
+            text: '',
+      });
+
+        function handleChange (e) {
+            setUserInfo({ text: e.target.value})
+        }
+
+        function handleSubmit(e) {
+            props.uploadQuote(props.currentUser.key,userInfo)
+            document.getElementById('my-input').value = '';
+        }    
         return (
             <Container maxWidth="sm" justify="center" style={{ backgroundColor: '#cfe8fc', borderRadius: '10px'}}>
                 <Box pt={3}>
@@ -14,6 +26,13 @@ function Profile(props)  {
                     </Typography>
                 </Box>
                 ))}
+                <Box pt={2}>
+                <FormControl fullWidth= "true">
+                    <InputLabel htmlFor="my-input">Add new quote</InputLabel>
+                    <Input onChange={(e) => handleChange(e)}id="my-input" aria-describedby="my-helper-text" />
+                    <Button onClick={(e) => handleSubmit(e)}>Upload</Button>
+                </FormControl>
+                </Box>
                 <br></br>
             </Container>
         )

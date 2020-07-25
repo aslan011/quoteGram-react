@@ -19,7 +19,7 @@ function NavBar() {
         <AppBar color="primary" position="static">
           <Toolbar>
             <ListItem>
-              <Link to='/'><img src="./logo.png" alt="logo"/></Link>
+              <Link to='/'><img src={require("./logo.png")} alt="logo"/></Link>
             </ListItem>
             <ListItem>
               <SearchIcon></SearchIcon>

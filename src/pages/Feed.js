@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Box, Typography } from '@material-ui/core';
 
 function Feed(props)  {
@@ -11,7 +12,11 @@ function Feed(props)  {
             return (
             <Container maxWidth="sm" justify="center" style={{ backgroundColor: '#cfe8fc', borderRadius: '10px'}}>
                 <Box pt={3}>
-                    <Typography color="primary" variant="h5">Updates from your followers will appear here, go and explore and get following!</Typography>
+                    <Typography color="primary" variant="h5">Updates from your followers will appear here, go  
+                         {<Link to='/explore'> Explore</Link>} and get following!
+                        <br></br>
+                        Or you can check out your {<Link to='/profile'>Profile</Link>} 
+                    </Typography>
                     <br></br>
                 </Box>
             </Container>
