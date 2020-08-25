@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/quoteGram-react/static/css/main.5f361e03.chunk.css",
+    "main.js": "/quoteGram-react/static/js/main.4c14dd8d.chunk.js",
+    "main.js.map": "/quoteGram-react/static/js/main.4c14dd8d.chunk.js.map",
+    "runtime-main.js": "/quoteGram-react/static/js/runtime-main.9a3ddba0.js",
+    "runtime-main.js.map": "/quoteGram-react/static/js/runtime-main.9a3ddba0.js.map",
+    "static/js/2.4e6c4a46.chunk.js": "/quoteGram-react/static/js/2.4e6c4a46.chunk.js",
+    "static/js/2.4e6c4a46.chunk.js.map": "/quoteGram-react/static/js/2.4e6c4a46.chunk.js.map",
+    "index.html": "/quoteGram-react/index.html",
+    "precache-manifest.bf2262e7cbf9f4c9bf3e572f60640f70.js": "/quoteGram-react/precache-manifest.bf2262e7cbf9f4c9bf3e572f60640f70.js",
+    "service-worker.js": "/quoteGram-react/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/quoteGram-react/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.4e6c4a46.chunk.js.LICENSE.txt": "/quoteGram-react/static/js/2.4e6c4a46.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a3ddba0.js",
+    "static/js/2.4e6c4a46.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.4c14dd8d.chunk.js"
+  ]
+}
